@@ -84,6 +84,8 @@ This app only have a few dependencies (very lightweight)
 namely: 
 - styled-components [learn more](https://www.npmjs.com/package/styled-components)
 
+- a splash of React confetti <a href="https://www.npmjs.com/package/react-confetti">❤️🎉</a>
+
 
 ### Prerequisites
 
