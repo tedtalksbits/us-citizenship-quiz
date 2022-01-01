@@ -1,0 +1,2 @@
+*,:after,:before{box-sizing:border-box}blockquote,body,dd,dl,figure,h1,h2,h3,h4,p{margin:0}body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:Poppins,sans-serif}code{font-family:source-code-pro,Menlo,Monaco,Consolas,Courier New,monospace}.emoji{font-size:8rem}.app{display:grid;grid-template-columns:1fr min(99ch,100%) 1fr;min-block-size:100vh;overflow-x:hidden}.app>*{grid-column:2}.full-bleed{grid-column:1/4;width:100%}@media screen and (max-width:980px){.app{padding:0 1rem}}
+/*# sourceMappingURL=main.6b3ae02c.css.map*/
