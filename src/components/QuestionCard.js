@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { questions } from '../lib/quiz'
 import ShowMessage from './PageElements/ShowMessage';
@@ -19,14 +19,14 @@ const QuestionCard = () => {
 
 
    //function to calc score and show correct answer
-   const handleAnswerClick = (isCorrect) => {
+   const handleAnswerClick = (isCorrect, e) => {
       setShowAns(true)
       if (isCorrect) {
          setScore((prev) => prev + 1);
       }
       setTimeout(() => {
          nextQuestion()
-      }, 800)
+      }, 1100)
    }
 
    //function to go to next question if within bounds of quiz length and hide correct answer 
@@ -34,7 +34,7 @@ const QuestionCard = () => {
    const nextQuestion = () => {
       setShowAns(false)
       if (currentIndex === quiz.length - 1) {
-         seeResults();
+         endOfQuiz()
       }
       else {
          setCurrentIndex(prev => prev + 1);
@@ -44,6 +44,12 @@ const QuestionCard = () => {
    //function to pre-emptively end quiz
    const seeResults = () => {
       setEndQuiz(true)
+      setAvg((score / currentIndex) * 100)
+   }
+
+   const endOfQuiz = () => {
+      setEndQuiz(true)
+      setCurrentIndex(prev => prev + 1)
       setAvg((score / currentIndex) * 100)
    }
 
@@ -86,7 +92,7 @@ const QuestionCard = () => {
                {quiz[currentIndex].answers.map((answer, key) => (
                   <Button
                      className={showAns && answer.isCorrect ? 'ans' : ''}
-                     onClick={(e) => { handleAnswerClick(answer.isCorrect) }}
+                     onClick={(e) => { handleAnswerClick(answer.isCorrect, e) }}
                      key={key}
                      disabled={showAns}
                   >
@@ -104,10 +110,6 @@ const QuestionCard = () => {
                </Button>
             </div>
          </Box>
-
-         {/* <Button disabled={!showAns} onClick={() => { nextQuestion() }}>Submit Answer</Button> */}
-
-
       </>
    )
 }

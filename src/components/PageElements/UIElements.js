@@ -33,6 +33,10 @@ export const Button = styled.button`
    :active{
       transform: scaleX(.9);
    }
+
+   &.selected{
+      background: orangered;
+   }
 `
 
 export const Box = styled.div`
