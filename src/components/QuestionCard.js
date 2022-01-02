@@ -24,7 +24,7 @@ const QuestionCard = () => {
       }
       setTimeout(() => {
          nextQuestion()
-      }, 1100)
+      }, 1800)
    }
 
    //function to go to next question if within bounds of quiz length and hide correct answer 
@@ -80,9 +80,9 @@ const QuestionCard = () => {
       <>
          <Box className='question-box m-full-y' >
             <div className="top">
-               <h6>question {currentIndex + 1} of {randQustions.length}</h6>
+               <h6 className='top-text'>question {currentIndex + 1} of {randQustions.length}</h6>
                <div className="question">
-                  <h2>{randQustions[currentIndex].question}</h2>
+                  <h2 className='question-text'>{randQustions[currentIndex].question}</h2>
                </div>
             </div>
 
