@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/us-citizenship-quiz/static/css/main.6b3ae02c.css",
-    "main.js": "/us-citizenship-quiz/static/js/main.589f3a0e.js",
+    "main.js": "/us-citizenship-quiz/static/js/main.fcbd5965.js",
     "index.html": "/us-citizenship-quiz/index.html",
     "main.6b3ae02c.css.map": "/us-citizenship-quiz/static/css/main.6b3ae02c.css.map",
-    "main.589f3a0e.js.map": "/us-citizenship-quiz/static/js/main.589f3a0e.js.map"
+    "main.fcbd5965.js.map": "/us-citizenship-quiz/static/js/main.fcbd5965.js.map"
   },
   "entrypoints": [
     "static/css/main.6b3ae02c.css",
-    "static/js/main.589f3a0e.js"
+    "static/js/main.fcbd5965.js"
   ]
 }
