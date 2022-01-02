@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { questions } from '../lib/quiz'
+import { randQustions } from '../lib/quiz'
 import ShowMessage from './PageElements/ShowMessage';
 import { Box, Button } from './PageElements/UIElements';
 import ShowConfetti from './ShowConfetti';
@@ -12,11 +12,9 @@ const BasicGrid = styled.div`
 const QuestionCard = () => {
    const [currentIndex, setCurrentIndex] = useState(0)
    const [endQuiz, setEndQuiz] = useState(false)
-   const [quiz, setQuiz] = useState(questions)
    const [score, setScore] = useState(0);
    const [avg, setAvg] = useState(0);
    const [showAns, setShowAns] = useState(false);
-
 
    //function to calc score and show correct answer
    const handleAnswerClick = (isCorrect, e) => {
@@ -33,7 +31,7 @@ const QuestionCard = () => {
    // if ouside the bounds of the quiz array, the quiz will end
    const nextQuestion = () => {
       setShowAns(false)
-      if (currentIndex === quiz.length - 1) {
+      if (currentIndex === randQustions.length - 1) {
          endOfQuiz()
       }
       else {
@@ -82,14 +80,14 @@ const QuestionCard = () => {
       <>
          <Box className='question-box m-full-y' >
             <div className="top">
-               <h6>question {currentIndex + 1} of {quiz.length}</h6>
+               <h6>question {currentIndex + 1} of {randQustions.length}</h6>
                <div className="question">
-                  <h2>{quiz[currentIndex].question}</h2>
+                  <h2>{randQustions[currentIndex].question}</h2>
                </div>
             </div>
 
             <BasicGrid className="answers-row middle">
-               {quiz[currentIndex].answers.map((answer, key) => (
+               {randQustions[currentIndex].answers.map((answer, key) => (
                   <Button
                      className={showAns && answer.isCorrect ? 'ans' : ''}
                      onClick={(e) => { handleAnswerClick(answer.isCorrect, e) }}

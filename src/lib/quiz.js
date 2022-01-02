@@ -1,6 +1,6 @@
 
 
-export const questions = [
+const questions = [
    {
       question: "What is the supreme law of the land?",
       answers: [
@@ -255,3 +255,5 @@ export const questions = [
    },
 
 ]
+
+export const randQustions = questions.sort(() => Math.random() - 0.5)
