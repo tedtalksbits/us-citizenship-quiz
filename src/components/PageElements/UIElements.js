@@ -26,8 +26,12 @@ export const Button = styled.button`
       color: ${({ theme }) => theme.textDark1};
       background: ${({ disabled }) => disabled ? '#ffffff26' : ''};
    }
-   :hover{
-      filter: brightness(1.2);
+
+   @media screen and (min-width: 1080px){
+
+      :hover{
+         filter: brightness(1.2);
+      }
    }
    
    :active{
