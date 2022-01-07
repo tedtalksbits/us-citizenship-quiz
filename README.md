@@ -126,7 +126,7 @@ _To run this app locally_
 - [x] Beautiful UI & UX 
 - [x] User feedback
 - [x] Allow user to preemptively end quiz and get current score
-- [ ] Add question randomization
+- [x] Add question randomization
 - [ ] User defined number of questions 
 
 
